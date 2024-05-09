@@ -1,0 +1,96 @@
+1.
+---
+nearest
+id            def            use                  path
+1            87              (88,T)               <87,88,89>
+2            87              (88,F)               <87,88,91>
+3            87              (91,T)               <87,88,91,92>
+4            87              (91,F)               <87,88,91,End>
+5            87               92                  <87,88,91,92>
+---
+target
+id            def            use                  path
+1              92             93                  <92,93>
+---
+path
+id            def            use                  path
+1              93            (95,T)               <93,95,98>
+2              93            (95,F)               <93,95,96>
+3              93             98                  <93,95,98>
+---
+2.
+---
+cellW
+id            def            use                  path
+1              81             89                 <81-86,87,88,89>
+2              81             92                 <81-86,87,88,89-92>
+---
+cellH
+id            def            use                  path
+1              82             90                 <82-86,87,88,89,90>
+2              82             92                 <82-86,87,88,89-92>
+---
+y
+id            def            use                  path
+1              87            (87,T)               <87,88>
+2              87            (87,F)               <87,End>
+3              87            87                   <87,88,87>
+---
+x
+id            def            use                  path
+1              88            (88,T)               <88,89>
+2              88            (88,F)               <88,87>
+3              88            88                   <88,89,88>
+---
+cellX
+id            def            use                  path
+1              89             92                 <89,90,91,92>
+---
+cellY
+id            def            use                  path
+1              90             92                 <90,91,92>
+---
+square
+id            def            use                  path
+1              91             92                 <91,92>
+---
+
+All-defs coverage:
+1.
+	nearest -> 5
+	target -> 1
+	path -> 3
+2.
+	cellW -> 1
+	cellH -> 1
+	y -> 1
+	x -> 1
+	cellX -> 1
+	cellY -> 1
+	square -> 1
+
+All-c-usages coverage:
+1.
+	nearest -> 5
+	target -> 1
+	path -> 3
+2.
+	cellW -> 1,2
+	cellH -> 1,2
+	y -> 3
+	x -> 3
+	cellX -> 1
+	cellY -> 1
+	square -> 1
+
+All-p-usages coverage:
+1.
+	nearest -> 1,2,3,4
+	path -> 1,2
+2.
+	y -> 1,2
+	x -> 1,2
+
+All-uses coverage:
+
+All ids for all variables

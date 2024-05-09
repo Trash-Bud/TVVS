@@ -1,0 +1,19 @@
+1.
+States: 4
+Transitions: 8
+Events: 5
+
+2.
+5 paths
+
+3.
+
+States    | Turn on | Turn off | Temp ok | Too hot | Too Cold |
+----------|---------|----------|---------|---------|----------|
+Off       | Idle    |          |         |         |          |
+Idle      |         | Off      |         | Cooling | Heating  |
+Heating   |         | Off      | Idle    |         |          |
+Cooling   |         | Off      | Idle    |         |          |
+
+normal paths -> 8
+sneaky paths -> 12
